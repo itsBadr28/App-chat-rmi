@@ -5,9 +5,9 @@ public class Server {
 
     public static void main(String[] args) {
         try {
-            Adder obj = new AdderRemote();
+            Chat obj = new Remote();
             Registry reg = LocateRegistry.createRegistry(2005);
-            reg.rebind("add", obj);
+            reg.rebind("Chat", obj);
             System.out.println("Server Running....");
         } catch (Exception e) {
             System.out.println(e);

@@ -7,7 +7,7 @@ public class Client {
     public static void main(String[] args) {
         try {
             Registry reg = LocateRegistry.getRegistry("localhost", 2005);
-            Adder obj=(Adder) reg.lookup("add");
+            Chat obj = (Chat) reg.lookup("Chat");
             Scanner sc = new Scanner(System.in);
             System.out.print("Enter the Username: ");
             String username = sc.nextLine();
@@ -16,12 +16,13 @@ public class Client {
                 String message = sc.nextLine();
                 if (message.equals("exit")) {
                     System.out.println("Client Exit");
-                    obj.add(username,"Client Exit");
+                    obj.chat(username,"Client Exit");
                     break;
                 }
-                String ServerR =  obj.add(username,message);
+                String ServerR =  obj.chat(username,message);
                 System.out.println("Server: " + ServerR);
             }
+
 
         } catch (Exception e) {
             System.out.println(e);
