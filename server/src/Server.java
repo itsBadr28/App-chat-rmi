@@ -8,7 +8,7 @@ public class Server {
             Adder obj = new AdderRemote();
             Registry reg = LocateRegistry.createRegistry(2005);
             reg.rebind("add", obj);
-            System.out.println("Server Running...");
+            System.out.println("Server Running....");
         } catch (Exception e) {
             System.out.println(e);
         }

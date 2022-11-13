@@ -12,9 +12,10 @@ public class Client {
             System.out.print("Enter the Username: ");
             String username = sc.nextLine();
             while (true) {
-                System.out.print("Enter the  message: ");
+                System.out.print(username + ": ");
                 String message = sc.nextLine();
-                obj.add(username,message);
+                String ServerR =  obj.add(username,message);
+                System.out.println("Server: " + ServerR);
             }
 
         } catch (Exception e) {
