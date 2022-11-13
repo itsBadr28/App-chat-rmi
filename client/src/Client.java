@@ -14,6 +14,11 @@ public class Client {
             while (true) {
                 System.out.print(username + ": ");
                 String message = sc.nextLine();
+                if (message.equals("exit")) {
+                    System.out.println("Client Exit");
+                    obj.add(username,"Client Exit");
+                    break;
+                }
                 String ServerR =  obj.add(username,message);
                 System.out.println("Server: " + ServerR);
             }
