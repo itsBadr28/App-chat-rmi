@@ -126,7 +126,7 @@ public class ClientRMIGUI extends JFrame implements ActionListener{
     public JPanel getUsersPanel(){
 
         userPanel = new JPanel(new BorderLayout());
-        String  userStr = "Users List";
+        String  userStr = "Users list";
 
         JLabel userLabel = new JLabel(userStr, JLabel.CENTER);
         userPanel.add(userLabel, BorderLayout.NORTH);
